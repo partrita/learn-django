@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/lotto.css'%}">
+
+<div class="container lotto">
+  <h2>{{lotto.text}}</h2>
+  <p> by {{lotto.name}}</p>
+  <p> {{lotto.update_date}}</p>
+  <p> {{lotto.lottos|linebreaksbr}}</p>
+</div>
+  
+{% endblock %}

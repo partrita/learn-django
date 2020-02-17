@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/lotto.css'%}">
+
+<h1>My Lotto Page</h1>
+
+<a href="{% url 'lotto:new_lotto' %}">New lotto</a>
+
+<div class="container lotto">
+    {% for lotto in lottos %}
+       
+    <h2><a href="{% url 'lotto:detail' pk=lotto.pk  %}">{{lotto.text}}</a></h2>
+    <p>last update : {{lotto.update_date}} by {{lotto.name}}</p>
+    <p>{{lotto.lottos|linebreaksbr}}</p>
+    {% endfor %}
+  </div>
+    
+{% endblock %}

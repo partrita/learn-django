@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/lotto.css'%}">
+
+<div class="container lotto">
+  <form method="POST" class="post-form">
+      {%csrf_token%}  <!-- 보안이슈로 입력 -->
+      {{form.as_p}}
+    <button type="submit" class="save btn btn-default">Save</button>
+  </form>
+ </div>
+  
+{% endblock %}
