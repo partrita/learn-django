@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+{% for tool in tools %}
+<div class="tool">
+    <h1>
+        <a href='{% url tool.url %}'>{{ tool.name }}</a></h1>
+    {{ tool.description }}
+</div>
+{% endfor %}
+
+
+{% endblock %}
