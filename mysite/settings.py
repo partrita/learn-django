@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mylotto',
     'tailwind',
     'theme',
+    'users',
 ]
 
 MIDDLEWARE = [
