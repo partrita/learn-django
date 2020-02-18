@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class='grid grid-cols-1 px-6 py-4'>
+
     {% for post in posts %}
-        <div class="post">
-            <div class="date">
+    <div class="post_list max-w-sm rounded overflow-hidden shadow-lg ">
+        <div class="date px-6 py-4">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                 {{ post.published_date }}
-            </div>
-            <h1><a href="{% url 'post_detail'  pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            </span>
         </div>
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">
+                <a href="{% url 'post_detail'  pk=post.pk %}">{{ post.title }}</a></h1>
+            </div>
+            <p class="text-gray-700 text-base">
+                {{ post.text|linebreaksbr }}
+            </p>
+        </div>
+    </div>
     {% endfor %}
+</div>
+
 {% endblock %}
