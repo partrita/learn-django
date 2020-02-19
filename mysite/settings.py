@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'blog',
     'tools',
     'mylotto',
-    'tailwind',
-    'theme',
     'users',
 ]
 
@@ -128,6 +126,6 @@ STATIC_URL = '/static/'
 # modify
 LANGUAGE_CODE = 'ko-kr'
 TIME_ZONE = 'Asia/Seoul'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-TAILWIND_APP_NAME = 'theme'
+# TAILWIND_APP_NAME = 'theme'
