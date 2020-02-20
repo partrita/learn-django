@@ -21,5 +21,6 @@ urlpatterns = [
     path('tools/', include('tools.urls')),
     path('lotto/', include('mylotto.urls')),
     path('users/', include('users.urls')),
+    path('polls/', include('polls.urls')),
     path('', include('blog.urls')),
 ]

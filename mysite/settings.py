@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'tools',
     'mylotto',
     'users',
+    'polls',
 ]
 
 MIDDLEWARE = [

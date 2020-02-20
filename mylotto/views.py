@@ -13,7 +13,7 @@ def post(request):
         if form.is_valid(): #폼 검증 메소드
             lotto = form.save(commit = False) #lotto 오브젝트를 form으로 부터 가져오지만, 실제로 DB반영은 하지 않는다.
             lotto.generate()
-            return redirect('index') #url의 name을 경로대신 입력한다.
+            return redirect('lotto:index') #url의 name을 경로대신 입력한다.
     else:
         form = PostForm() #forms.py의 PostForm 클래스의 인스턴스
         return render(request, 'mylotto/form.html', {'form' : form})  # 템플릿 파일 경로 지정, 데이터 전달

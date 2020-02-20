@@ -17,3 +17,25 @@ class Vib1InputForm(ModelForm):
         model = Vib1Input
         fields = ('A','b','w','T')
 
+class SimpleInput(models.Model):
+    x = models.FloatField(
+        verbose_name='value of x')
+    y = models.FloatField(
+        verbose_name='value of y')
+    z = models.FloatField(
+        verbose_name='value of z')
+
+class Tool1Form(ModelForm):
+    class Meta:
+        model = SimpleInput
+        fields = ('x','y')
+
+class Tool2Form(ModelForm):
+    class Meta:
+        model = SimpleInput
+        fields = ('x','y','z')
+
+class Tool3Form(ModelForm):
+    class Meta:
+        model = SimpleInput
+        fields = ('x','y','z')
