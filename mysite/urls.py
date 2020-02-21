@@ -22,5 +22,7 @@ urlpatterns = [
     path('lotto/', include('mylotto.urls')),
     path('users/', include('users.urls')),
     path('polls/', include('polls.urls')),
+    path('cal/', include('cal.urls')),
+    # path('events/', include('events.urls')),
     path('', include('blog.urls')),
 ]
