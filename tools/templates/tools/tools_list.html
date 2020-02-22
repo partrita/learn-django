@@ -4,7 +4,7 @@
 {% for tool in tools %}
 <div class="tool py-3">
     <h1>
-        <a href="{% url tool.url %}"">{{ tool.name }}</a></h1>
+        <a href="{% url tool.url %}">{{ tool.name }}</a></h1>
     {{ tool.description }}
 </div>
 {% endfor %}

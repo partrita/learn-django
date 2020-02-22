@@ -4,9 +4,9 @@ from .compute import compute
 
 def tools_list(request):
     tools_list = [
-        {'name':'Square calculator', 'url': 'tool1', 'description':'square calculation'},
-        {'name':'Sum', 'url': 'tool2', 'description':'Sum of parameter'},
-        {'name':'tool3', 'url': 'tool3', 'description':'tool3_descript'},
+        {'name':'Square calculator', 'url': 'tools:tool1', 'description':'square calculation'},
+        {'name':'Sum', 'url': 'tools:tool2', 'description':'Sum of parameter'},
+        {'name':'tool3', 'url': 'tools:tool3', 'description':'tool3_descript'},
         ]
     return render(request, 'tools/tools_list.html', {'tools': tools_list})
 
@@ -32,7 +32,7 @@ def tool2(request):
         form = Tool2Form()
     return render(request, 'tools/tool2.html', {'form':form, 'result': result})
 
-def tool3():
+def tool3(request):
     result = None
     if request.method == 'POST':
         form = Tool3Form(request.POST)
