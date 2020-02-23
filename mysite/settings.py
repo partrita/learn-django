@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'polls',
     'events',
     'cal',
+    'boards',
 ]
 
 MIDDLEWARE = [

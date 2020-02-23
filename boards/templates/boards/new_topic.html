@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href="{% url 'boards:home' %}">Boards</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'boards:board_topics' board.pk %}">{{ board.name }}</a></li>
+        <li class="breadcrumb-item active">New topic</li>        
+    </ol>
+  </div>
+
+<!-- form -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Post</button>
+  </form>
+
+<!-- form end-->
+
+{% endblock %}
+
