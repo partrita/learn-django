@@ -37,14 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
-    'tools',
-    'mylotto',
-    'users',
-    'polls',
-    'events',
-    'cal',
-    'boards',
+    'blog.apps.BlogConfig',
+    'tools.apps.ToolsConfig',
+    'mylotto.apps.MylottoConfig',
+    'users.apps.UsersConfig',
+    'polls.apps.PollsConfig',
+    'events.apps.EventsConfig',
+    'cal.apps.CalConfig',
+    'boards.apps.BoardsConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +133,4 @@ TIME_ZONE = 'Asia/Seoul'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # TAILWIND_APP_NAME = 'theme'
+LOGIN_REDIRECT_URL = '/'
