@@ -1,4 +1,4 @@
-from django.forms import ModelForm, DateInput
+from django.forms import ModelForm, DateInput, DateTimeInput
 from .models import Event
 
 class EventForm(ModelForm):

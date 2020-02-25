@@ -27,6 +27,8 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('cal/', include('cal.urls')),
     path('boards/', include('boards.urls')),
-    # path('events/', include('events.urls')),
+    # path('schedule/', include('schedule.urls')),
+    path('reservation/', include('reservation.urls')),
+    path('crud/', include('crud.urls')),
     path('', include('blog.urls')),
 ]

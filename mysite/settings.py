@@ -45,6 +45,10 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'cal.apps.CalConfig',
     'boards.apps.BoardsConfig',
+    'reservation',
+    'djreservation',
+    'crud',
+    'widget_tweaks', # for crud app
 ]
 
 MIDDLEWARE = [
@@ -55,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'djreservation.middleware.ReservationMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -62,7 +67,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,9 +116,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -128,9 +135,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # modify
-LANGUAGE_CODE = 'ko-kr'
-TIME_ZONE = 'Asia/Seoul'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # TAILWIND_APP_NAME = 'theme'
 LOGIN_REDIRECT_URL = '/'
+
+# django-reservation config
+DEFAULT_FROM_EMAIL = "mail@example.com"
+EMAIL_HOST = "localhost"
+EMAIL_PORT = "1025"
