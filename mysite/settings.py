@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'djreservation',
     'crud',
     'widget_tweaks', # for crud app
+    'news',
 ]
 
 MIDDLEWARE = [

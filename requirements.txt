@@ -1,2 +1,4 @@
 Django==2.2
 django-widget-tweaks==1.4.5
+bs4==0.0.1
+requests==2.23.0

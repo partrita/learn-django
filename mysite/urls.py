@@ -30,5 +30,6 @@ urlpatterns = [
     # path('schedule/', include('schedule.urls')),
     path('reservation/', include('reservation.urls')),
     path('crud/', include('crud.urls')),
+    path('news/', include('news.urls')),
     path('', include('blog.urls')),
 ]
