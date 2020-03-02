@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h1>
+ Bookmark app
+</h1>
+<div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="alert alert-danger">
+            {{ object }} 를 진짜로 삭제하시겠습니까?
+        </div>
+        <input type="submit" value="Delete" class="btn btn-info btn-sm">
+    </form>
+
+</div>
+{% endblock %}

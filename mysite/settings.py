@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'crud',
     'widget_tweaks', # for crud app
     'news',
+    'bookmark',
 ]
 
 MIDDLEWARE = [

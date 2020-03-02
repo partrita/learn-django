@@ -31,5 +31,6 @@ urlpatterns = [
     path('reservation/', include('reservation.urls')),
     path('crud/', include('crud.urls')),
     path('news/', include('news.urls')),
+    path('bookmark/', include('bookmark.urls')),
     path('', include('blog.urls')),
 ]
