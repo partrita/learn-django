@@ -4,9 +4,8 @@ from .models import Post
 from django.views.generic import ListView, DetailView
 from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse('hello world!')
-# Create your views here.
+# def index(request):
+#  got   return HttpResponse('hello world!')
 
 #home view for posts. Posts are displayed in a list
 class IndexView(ListView):
