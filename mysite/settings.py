@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'widget_tweaks', # for crud app
     'news',
     'bookmark',
+    'crispy_forms', # form control
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,9 @@ LOGIN_REDIRECT_URL = '/'
 DEFAULT_FROM_EMAIL = "mail@example.com"
 EMAIL_HOST = "localhost"
 EMAIL_PORT = "1025"
+
+# django crysp form
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'blog:post_list'
+LOGIN_URL = 'login' # block the access to profile pages

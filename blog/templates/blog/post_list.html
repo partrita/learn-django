@@ -2,15 +2,9 @@
 
 {% block content %}
 <div class="container">
-    <div class="page-header">
-        {% if user.is_authenticated %}
-        <a href="{% url 'blog:post_new' %}" class="top-menu">글쓰기</a>
-        <a href="{% url 'blog:post_draft_list' %}" class="top-menu">임시글</span></a>
-        <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">로그아웃</a>)</small></p>
-        {% else %}
-        <a href="{% url 'login' %}" class="top-menu">로그인</a>
-        {% endif %}
-    </div>
+    {% if user.is_authenticated %}
+    <a href="{% url 'blog:post_new' %}" class="btn btn-default">New post</a>
+    {% endif %}
     {% for post in posts %}
     <div class="blog-post p-1">
         <h1>
