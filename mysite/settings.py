@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'widget_tweaks', # for crud app
     'news',
     'bookmark',
+    'wordcount.apps.WordcountConfig',
 ]
 
 MIDDLEWARE = [
