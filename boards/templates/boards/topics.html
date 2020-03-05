@@ -9,6 +9,12 @@
     </ol>
   </div>
 
+  <div>
+    <a href="{% url 'boards:new_topic' pk=board.pk %}" class="btn btn-default">
+      New Topic
+    </a>
+  </div>
+  
     <table class="table">
     <thead class="thead-inverse">
       <tr>
@@ -20,13 +26,18 @@
       </tr>
     </thead>
     <tbody>
-      {% for topic in board.topics.all %}
+      {% for topic in topics %}
+        {% url 'boards:topic_posts' board.pk topic.pk as topic_url %}
         <tr>
-          <td>{{ topic.subject }}</td>
-          <td>{{ topic.starter.username }}</td>
-          <td>0</td>
-          <td>0</td>
-          <td>{{ topic.last_updated }}</td>
+          <td>
+            <p class="mb-0">
+              <a href="{{ topic_url }}">{{ topic.subject }}</a>
+            </p>
+          </td>
+          <td class="align-middle">{{ topic.starter.username }}</td>
+          <td class="align-middle">{{ topic.replies }}</td>
+          <td class="align-middle">{{ topic.views }}</td>
+          <td class="align-middle">{{ topic.last_updated }}</td>
         </tr>
       {% endfor %}
     </tbody>
