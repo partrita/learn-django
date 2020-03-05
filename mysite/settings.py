@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'news',
     'bookmark',
     'crispy_forms', # form control
+    'library',
 ]
 
 MIDDLEWARE = [
@@ -153,3 +154,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog:post_list'
 LOGIN_URL = 'login' # block the access to profile pages
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

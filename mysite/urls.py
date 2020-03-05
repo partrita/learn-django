@@ -37,5 +37,6 @@ urlpatterns = [
     path('crud/', include('crud.urls')),
     path('news/', include('news.urls')),
     path('bookmark/', include('bookmark.urls')),
+    path('library/', include('library.urls')),
     path('', include('blog.urls')),
 ]
