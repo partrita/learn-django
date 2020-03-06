@@ -45,14 +45,12 @@ INSTALLED_APPS = [
     'events.apps.EventsConfig',
     'cal.apps.CalConfig',
     'boards.apps.BoardsConfig',
-    'reservation',
-    'djreservation',
     'crud',
     'widget_tweaks', # for crud app
     'news',
     'bookmark',
-    'crispy_forms', # form control
-    'library',
+    'wordcount.apps.WordcountConfig',
+    'csv_app',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +61,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'djreservation.middleware.ReservationMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'

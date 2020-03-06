@@ -33,10 +33,10 @@ urlpatterns = [
     path('cal/', include('cal.urls')),
     path('boards/', include('boards.urls')),
     # path('schedule/', include('schedule.urls')),
-    path('reservation/', include('reservation.urls')),
     path('crud/', include('crud.urls')),
     path('news/', include('news.urls')),
     path('bookmark/', include('bookmark.urls')),
-    path('library/', include('library.urls')),
+    path('wordcount/', include('wordcount.urls')),
+    path('csv/', include('csv_app.urls')),
     path('', include('blog.urls')),
 ]
