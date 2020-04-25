@@ -33,5 +33,6 @@ urlpatterns = [
     path('bookmark/', include('bookmark.urls')),
     path('wordcount/', include('wordcount.urls')),
     path('csv/', include('csv_app.urls')),
+    path('catalog/', include('catalog.urls')),
     path('', include('blog.urls')),
 ]

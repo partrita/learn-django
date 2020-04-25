@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'bookmark',
     'wordcount.apps.WordcountConfig',
     'csv_app',
+    'catalog',
 ]
 
 MIDDLEWARE = [
