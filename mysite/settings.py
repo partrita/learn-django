@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'tools.apps.ToolsConfig',
     'mylotto.apps.MylottoConfig',
-    'users.apps.UsersConfig',
+    'users.apps.UsersConfig', # user registration
+    'crispy_forms', # 폼을 정리해줌
     'polls.apps.PollsConfig',
     'events.apps.EventsConfig',
     'cal.apps.CalConfig',
