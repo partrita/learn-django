@@ -1,7 +1,6 @@
-{% extends 'crud/base.html' %}
+{% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
+    <div class="row py-3">
         <div class="col-md-1 col-xs-1 col-sm-1"></div>
         <div class="col-md-10 col-xs-10 col-sm-10">
             <h3 class="round3" style="text-align:center;">Posts</h3>
@@ -14,7 +13,7 @@
             <br />
             <a href="{% url 'crud:post' %}">
                 <button type="button" class="btn btn-success">
-                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="glyphicon glyphicon-plus">Add post</span>
                 </button>
             </a>
         </div>
@@ -53,5 +52,4 @@
         </div>
     </div>
     {% endfor %}
-</div>
 {% endblock %}
