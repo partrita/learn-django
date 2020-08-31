@@ -47,7 +47,7 @@ class Book(models.Model):
 
     def get_absolute_url(self):
         """Returns the url to access a particular book instance."""
-        return reverse('book-detail', args=[str(self.id)])
+        return reverse('catalog:book-detail', args=[str(self.id)])
 
     def __str__(self):
         """String for representing the Model object."""
@@ -95,7 +95,7 @@ class BookInstance(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return '{0} ({1})'.format(self.id, self.book.title)
+        return f'{self.id} ({self.book.title})'
 
 
 class Author(models.Model):
@@ -114,4 +114,4 @@ class Author(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return '{0}, {1}'.format(self.last_name, self.first_name)
+        return f'{self.last_name}, {self.first_name}'

@@ -39,3 +39,8 @@ urlpatterns = [
     path('catalog/', include('catalog.urls')),
     path('', include('blog.urls')),
 ]
+
+#Add Django site authentication urls (for login, logout, password management)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
