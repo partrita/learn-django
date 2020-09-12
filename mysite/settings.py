@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mylotto.apps.MylottoConfig',
     'users.apps.UsersConfig', # user registration
     'crispy_forms', # 폼을 정리해줌
+    'debug_toolbar',
     'polls.apps.PollsConfig',
     'events.apps.EventsConfig',
     'cal.apps.CalConfig',
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # debugtoolbar
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -147,3 +149,7 @@ LOGIN_REDIRECT_URL = '/'
 DEFAULT_FROM_EMAIL = "mail@example.com"
 EMAIL_HOST = "localhost"
 EMAIL_PORT = "1025"
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
