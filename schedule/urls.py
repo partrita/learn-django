@@ -1,8 +1,7 @@
 from django.urls import path
 from . import views
+app_name = 'schedule'
 
-app_name = 'wordcount'
 urlpatterns = [
-    path('', views.word, name='index'),
-
+    path('', views.index, name='index'),
 ]

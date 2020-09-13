@@ -1,42 +1,36 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<h1>글자 세는 프로그램</h1>
+<div class="row">
+  <div class="col-md-8">
+    <h1>글자 세는 프로그램</h1>
+    <div>
+      {% if result != None %}
+      <div>입력한 글 : {{ result.full }}</div>
+      <br />
+      <div>입력한 글의 총 단어 수: {{ result.length }}</div>
+      <br />
+      <div>
+        <ul>
+          {% for key,value in result.dic %}
+          <li>{{ key }} : {{ value }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
 
-<div>
-    {% if result != None %}
-<div>
-    입력한 글 : {{ result.full }}
-</div>
-<br>
-<div>
-    입력한 글의 총 단어 수: {{ result.length }}
-</div>
-<br>
-<div>   
-    <ul>
-    {% for key,value in result.dic %}
-        <li>
-            {{ key }} : {{ value }}
-        </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-</div>    
-</div>
-    
-<div>
-    <form action="" method="POST">
+    <div>
+      <form action="" method="POST">
         {% csrf_token %}
         <table>
-            <tr>
-                <td>
-                    {{ form.user_input }}
-                </td>
-            </tr>
+          <tr>
+            <td>{{ form.user_input }}</td>
+          </tr>
         </table>
-                    <input type="submit" value="입력!">
-    </form>
-</div>
+        <input type="submit" value="입력" class='btn btn-default btn-lg'/>
+      </form>
+    </div>
 
+  </div>
+</div>
 {% endblock %}

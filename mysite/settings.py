@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'wordcount.apps.WordcountConfig',
     'csv_app',
     'catalog',
+    'bulma_todo',
+    'schedule',
 ]
 
 MIDDLEWARE = [

@@ -5,6 +5,7 @@ from users import views as user_views
 from django.conf import settings
 
 urlpatterns = [
+    path('todo/', include('bulma_todo.urls')),
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
     # path('profile/', user_views.profile, name='profile'),
@@ -16,7 +17,8 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('cal/', include('cal.urls')),
     path('boards/', include('boards.urls')),
-    # path('schedule/', include('schedule.urls')),
+    path('schedule/', include('schedule.urls')),
+    # path('events/', include('events.urls')),
     path('crud/', include('crud.urls')),
     path('news/', include('news.urls')),
     path('bookmark/', include('bookmark.urls')),
