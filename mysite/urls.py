@@ -5,6 +5,7 @@ from users import views as user_views
 from django.conf import settings
 
 urlpatterns = [
+    path('hackernews/', include('hackernews.urls')),
     path('todo/', include('bulma_todo.urls')),
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),

@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'catalog',
     'bulma_todo',
     'schedule',
+    'hackernews',
 ]
 
 MIDDLEWARE = [

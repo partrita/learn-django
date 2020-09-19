@@ -36,3 +36,4 @@ def news_list(request):
         'object_list': headlines,
     }
     return render(request, "news/home.html", context)
+
