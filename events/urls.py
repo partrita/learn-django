@@ -4,5 +4,7 @@ from . import views
 app_name = 'events'
 
 urlpatterns = [
-    path('', views.index, name ='index'),
+    path('', views.CalendarView.as_view(), name='index'),
+    # path('event/new/', views.create_event, name='event_new'),
+    # path('', views.index, name ='index'),
 ]

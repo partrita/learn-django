@@ -52,8 +52,8 @@ class Equipment(models.Model):
     manager = models.ForeignKey("Manager", on_delete=models.CASCADE)
     # event = models.ForeignKey('Event', on_delete=SET.NULL)
 
-    # def __str__(self):
-    #     return self.model_name
+    def __str__(self):
+        return self.model_name
 
     # def get_absolute_url(self):
     #     return reverse("equip_detail", kwargs={"pk": self.pk})
@@ -65,6 +65,6 @@ class Event(models.Model):
     notes = models.TextField('Textual notes', help_text='Text note', blank=True, null=True)
     equip = models.ForeignKey('Equipment', on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return self.title
+    def __str__(self):
+        return self.title
     
